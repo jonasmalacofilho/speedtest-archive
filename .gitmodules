@@ -1,0 +1,3 @@
+[submodule "minifixed"]
+	path = minifixed
+	url = git@github.com:jonasmalacofilho/minifixed.git
