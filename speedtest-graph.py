@@ -4,9 +4,15 @@
 # Licensed under the Modified BSD (3-clause) License
 
 from __future__ import print_function
+
 from sys import stdin, stdout
-import matplotlib.pyplot as plt
 import dateutil.parser
+import os
+
+import matplotlib
+if not os.environ.get("DISPLAY"):
+    matplotlib.use("Agg")  # for headless sessions
+import matplotlib.pyplot as plt
 
 
 def parse_date(text):
