@@ -12,7 +12,7 @@ uninstall: clear-crontab
 
 crontab: clear-crontab
 	{ crontab -l; echo "*/10 * * * * /usr/bin/speedtest-archive >>~/speedtest_data.tsv 2>>~/.speedtest_archive.log"; } | crontab -
-	{ crontab -l; echo "*/30 * * * * /usr/bin/speedtest-graph <~/speedtest_data.tsv >~/speedtest_graph.svg"; } | crontab -
+	{ crontab -l; echo "*/30 * * * * /usr/bin/speedtest-graph <~/speedtest_data.tsv >~/speedtest_graph.svg 2>>~/.speedtest_archive.log"; } | crontab -
 
 clear-crontab:
 	crontab -l | egrep -v "speedtest-(archive|graph)" | crontab -
