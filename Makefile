@@ -1,9 +1,9 @@
 install: /usr/bin/speedtest-archive /usr/bin/speedtest-graph crontab
 
-/usr/bin/speedtest-archive:
+/usr/bin/speedtest-archive: speedtest-archive.py
 	sudo cp speedtest-archive.py /usr/bin/speedtest-archive
 
-/usr/bin/speedtest-graph:
+/usr/bin/speedtest-graph: speedtest-graph.py
 	sudo cp speedtest-graph.py /usr/bin/speedtest-graph
 
 uninstall: clear-crontab
