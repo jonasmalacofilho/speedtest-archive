@@ -57,7 +57,7 @@ plt.grid(grid)
 plt.subplot2grid((5, 1), (4, 0))
 plt.plot(time, ping, color="red")
 plt.ylabel("Ping (ms)")
-plt.xticks(plt.xticks()[0], [])
+plt.xticks(rotation=45)
 plt.grid(grid)
 
 plt.tight_layout(pad=5)
