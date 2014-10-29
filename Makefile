@@ -1,14 +1,14 @@
-install: /usr/bin/speedtest-archive /usr/bin/speedtest-graph crontab
+install: /usr/bin/speedtest-archive /usr/bin/speedtest-graph
 
 /usr/bin/speedtest-archive: speedtest-archive.py
-	sudo cp speedtest-archive.py /usr/bin/speedtest-archive
+	cp speedtest-archive.py /usr/bin/speedtest-archive
 
 /usr/bin/speedtest-graph: speedtest-graph.py
-	sudo cp speedtest-graph.py /usr/bin/speedtest-graph
+	cp speedtest-graph.py /usr/bin/speedtest-graph
 
-uninstall: clear-crontab
-	sudo rm -f /usr/bin/speedtest-archive
-	sudo rm -f /usr/bin/speedtest-graph
+uninstall:
+	rm -f /usr/bin/speedtest-archive
+	rm -f /usr/bin/speedtest-graph
 
 crontab: clear-crontab
 	{ crontab -l; echo "*/10 * * * * /usr/bin/speedtest-archive >>~/speedtest_data.tsv 2>>~/.speedtest_archive.log"; } | crontab -
