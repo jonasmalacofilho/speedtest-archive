@@ -6,7 +6,7 @@ _Log, archive and plot internet speeds_
 Dependencies
 ------------
 
-- [speedtest-cli] (jonasmalacofilho's fork)
+- jonasmalacofilho's fork of [speedtest-cli]
 - OS packages:
    - Ubuntu: libfreetype6-dev python-dev
 - PyPI packages: docopt dateutils matplotlib
